@@ -5,7 +5,7 @@ X = np.array([[1, 1], [1, 2], [2, 2], [2, 3]])
 y = np.array([6, 8, 9, 11])
 
 # add the initial bias (w0) to each item in X
-num_of_row = X.shape[0]
+(num_of_row, _) = X.shape
 init_bias = np.ones((num_of_row, 1))
 X = np.hstack([init_bias, X])
 
@@ -13,6 +13,10 @@ X = np.hstack([init_bias, X])
 XT = X.T
 W = np.linalg.inv(XT @ X) @ XT @ y
 
+print("W=")
+print(W)
+
+print("y predict =")
 # predict
 y_pred = X @ W
 
