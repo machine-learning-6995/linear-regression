@@ -40,6 +40,8 @@ y_pred = X_pred @ w
 # print(y0)
 print(y_pred)
 
+print("Found w = ", w)
+
 # # Drawing the fitting line 
 plt.plot(X.T, y.T, 'ro')     # data 
 plt.plot(X_pred, y_pred)               # the fitting line
